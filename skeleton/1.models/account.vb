@@ -139,17 +139,33 @@
         End If
         Dim r As Account = CType(obj, Account)
         ' Use Equals to compare instance variables.
-        Return Me._id.Equals(r._id) And Me._nickName.Equals(r._nickName) And Me._accountType.Equals(r._accountType) _
-            And Me._accountRole.Equals(r._accountRole) And Me._token.Equals(r._token) And Me._lastUseAt.Equals(r._lastUseAt) _
-            And Me._accountStatus.Equals(r.AccountStatus) And Me._nameFirst.Equals(r._nameFirst) And Me._nameLast.Equals(r._nameLast) _
-            And Me._nameFirstKana.Equals(r.NameFirstKana) And Me._nameLastKana.Equals(r._nameLastKana) And Me._birthday.Equals(r.Birthday)
+        Return Me._id.Equals(r._id) _
+            And Me._nickName.Equals(r._nickName) _
+            And Me._accountType.Equals(r._accountType) _
+            And Me._accountRole.Equals(r._accountRole) _
+            And Me._token.Equals(r._token) _
+            And Me._lastUseAt.Equals(r._lastUseAt) _
+            And Me._accountStatus.Equals(r.AccountStatus) _
+            And Me._nameFirst.Equals(r._nameFirst) _
+            And Me._nameLast.Equals(r._nameLast) _
+            And Me._nameFirstKana.Equals(r.NameFirstKana) _
+            And Me._nameLastKana.Equals(r._nameLastKana) _
+            And Me._birthday.Equals(r.Birthday)
     End Function
 
     Public Overrides Function GetHashCode() As Integer
-        Return _id.GetHashCode ^ _nickName.GetHashCode ^ _accountType.GetHashCode ^ _
-            _accountRole.GetHashCode ^ _token.GetHashCode ^ _lastUseAt.GetHashCode ^ _
-            _accountStatus.GetHashCode ^ _nameFirst.GetHashCode ^ _nameLast.GetHashCode ^ _
-            _nameFirstKana.GetHashCode ^ _nameLastKana.GetHashCode ^ _birthday.GetHashCode
+        Return _id.GetHashCode _
+            ^ _nickName.GetHashCode _
+            ^ _accountType.GetHashCode _
+            ^ _accountRole.GetHashCode _
+            ^ _token.GetHashCode _
+            ^ _lastUseAt.GetHashCode _
+            ^ _accountStatus.GetHashCode _
+            ^ _nameFirst.GetHashCode _
+            ^ _nameLast.GetHashCode _
+            ^ _nameFirstKana.GetHashCode _
+            ^ _nameLastKana.GetHashCode _
+            ^ _birthday.GetHashCode
 
     End Function
 
